@@ -33,6 +33,8 @@ const Contact = () => {
                    toast.error("something went wrong try again")
                 }
       )
+
+      form.current.value=" "
   }
 
   return (
