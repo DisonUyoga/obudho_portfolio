@@ -71,6 +71,11 @@
     text-align: center;
     margin-right: 10px;
   }
+  @media (max-width:728){
+    .flat-button{
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .map-wrap {
