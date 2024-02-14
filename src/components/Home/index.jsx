@@ -87,6 +87,9 @@ const Home = () => {
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
+          <Link to="/portfolio" className="flat-button">
+            VIEW PROFILE
+          </Link>
         </div>
         <Cube/>
       </div>

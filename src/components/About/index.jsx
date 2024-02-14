@@ -40,13 +40,10 @@ const About = () => {
             of a team ambitious to advance existing web and mobile technologies.
           </p>
           <p align="LEFT">
-            I am armed with Reactjs, Vuejs and React Native for the Fronted. Django Rest Framework,
-            Nodejs, Expressjs and firebase for the backend. However, Am much stronger with React Native,
-            Reactjs and Django Rest Framework. I am also packed with other supplementary 'weapons' such as
-            Reduxjs, boostrap, bulma, tailwind, sass, Machine Learning with python and moderately with CC photoshop for graphic design.
+            I am an expert in python, JavaScript, typescript and also familiar with groovy.I have a solid foundation in Reactjs, nextjs and Django Rest Framework. I am well aquinted with vuejs, nodejs, firebase and React Native. I have got handson experience with Reduxjs, boostrap, SWR,prisma, aws(EC2 and lambda), jenkins,docker, bulma, figma tailwind, sass, Machine Learning technologies(sklearn, tensorflow2, pandas, numpy and matplotlib) and the yahooFinancials python library. 
           </p>
           <p>
-            To briefly describe myself, am a proud husband and a Dad to a cute daughter named Jordyn.
+            To briefly describe myself, I am a self-taught developer with swift understanding of concepts within short time frames.
           </p>
         </div>
 

@@ -1,7 +1,9 @@
+
 .portfolio-page {
     padding-left: 100px;
     padding-right: 50px;
-    width: calc(100% - 150px);
+    // width: calc(100% - 150px);
+    width: 100%;
     position: initial;
     height: 100%;
     overflow: auto;
@@ -9,6 +11,7 @@
     h1.page-title {
         margin-left: 100px;
         margin-top: 100px;
+       
     }
 
     .images-container {
@@ -16,15 +19,18 @@
         gap: 15px;
         flex-wrap: wrap;
         padding-bottom: 100px;
+        
     }
 
     .image-box {
         position: relative;
         flex: 1 1 20%;
-        height: 400px;
+        height: 350px !important;
+        width: 100% !important;
         overflow: hidden;
         border-radius: 10px;
-        max-width: calc(25% - 10px);
+     
+        // max-width: calc(25% - 5px);
 
         .portfolio-image {
             position: absolute;
@@ -38,7 +44,8 @@
             position: absolute;
             width: 100%;
             z-index: 3;
-            padding: 10px 20px;
+            padding: 5px;
+          
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             background: linear-gradient(
                 180deg,
@@ -55,15 +62,39 @@
             font-size: 24px;
             font-weight: 500;
             line-height: 24px;
+            
         }
-
+        
         .description {
+            display: flex;
+            flex-wrap: wrap;
             font-size: 14px;
             margin-bottom: 5px;
             color: #fff;
             font-weight: 700;
         }
+        @media only screen and (max-width:768px){
+            .title{
+                font-size: 1.8rem;
+            }
+            .description{
+                font-weight: 400;
 
+            }
+        }
+        @media only screen and (max-width:567px){
+            .title{
+                font-size: 1.8rem;
+            }
+            .description{
+                display: flex;
+               
+                font-weight: 400;
+                font-size: 1rem;
+
+            }
+        }
+        
         .btn {
             margin-top: 30px;
             margin-bottom: 10px;
@@ -109,5 +140,20 @@
             bottom: 0;
             background: transparent;
         }
+    }
+}
+.spinner-layout{
+    position: absolute;
+    right: 5%;
+    z-index: 9999999999999;
+    top: 5%;
+    width: 80%;
+    height:80%;
+}
+@media only screen and (max-width:768px){
+    .spinner-layout{
+        width:80%;
+        top:25%;
+        height:50%;
     }
 }

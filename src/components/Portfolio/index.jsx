@@ -4,6 +4,12 @@ import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../firebase';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faLinkedin,
+    faGithub
+  } from '@fortawesome/free-brands-svg-icons'
+import Cube from "../Cube"
 
 const Portfolio = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -24,7 +30,7 @@ const Portfolio = () => {
     }, []);
 
     const getPortfolio = async () => {
-        const querySnapshot = await getDocs(collection(db, 'portfolio'));
+        const querySnapshot = await getDocs(collection(db, 'firebase-course'));
         setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
     }
 
@@ -42,10 +48,25 @@ const Portfolio = () => {
                                 <div className="content">
                                     <p className="title">{port.name}</p>
                                     <h4 className="description">{port.description}</h4>
+                                    {/* github url */}
+                                    {/* linkedin url */}
+                                    {/*  */}
                                     <button
                                         className="btn"
-                                        onClick={() => window.open(port.url)}
-                                    >View</button>
+                                        onClick={() => window.open(port.github_url)}
+                                    ><FontAwesomeIcon
+                                    icon={faGithub}
+                                    color="#4d4d4e"
+                                    className="anchor-icon"
+                                  /></button>
+                                    <button
+                                        className="btn"
+                                        onClick={() => window.open(port.linkedIn_url)}
+                                    ><FontAwesomeIcon
+                                    icon={faLinkedin}
+                                    color="#4d4d4e"
+                                    className="anchor-icon"
+                                  /></button>
                                 </div>
                             </div>
                         )
@@ -58,7 +79,7 @@ const Portfolio = () => {
 
     return (
         <>
-            <div className="container portfolio-page">
+            <div className=" portfolio-page container">
                 <h1 className="page-title">
                     <AnimatedLetters
                         letterClass={letterClass}
@@ -66,7 +87,9 @@ const Portfolio = () => {
                         idx={15}
                     />
                 </h1>
+                
                 <div>{renderPortfolio(portfolio)}</div>
+                <div className="spinner-layout"><Cube/></div>
             </div>
             <Loader type="pacman" />
         </>
