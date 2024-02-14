@@ -11,6 +11,14 @@
     {
       "src": "/contact",
       "dest":"/"
+    },
+    {
+      "src": "/portfolio",
+      "dest":"/"
+    },
+    {
+      "src": "/dashboard",
+      "dest":"/"
     }
 
   ]
